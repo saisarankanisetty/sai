@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "5df5c5c6-74cd-4fa2-8d45-7ae2d9bea8fc",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://g.codefresh.io/api/pipelines/?projectId=616d8d41abbd6ed8305526b2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "618d2675d834164d7dd3c02e.98d7294e6380d96fc9c609e5a056da99",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://g.codefresh.io/api/pipelines/?projectId=616d8d41abbd6ed8305526b2",
+					"protocol": "https",
+					"host": [
+						"g",
+						"codefresh",
+						"io"
+					],
+					"path": [
+						"api",
+						"pipelines",
+						""
+					],
+					"query": [
+						{
+							"key": "projectId",
+							"value": "616d8d41abbd6ed8305526b2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://g.codefresh.io/api/hermes/events?type=registry",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "618d2675d834164d7dd3c02e.98d7294e6380d96fc9c609e5a056da99",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://g.codefresh.io/api/hermes/events?type=registry",
+					"protocol": "https",
+					"host": [
+						"g",
+						"codefresh",
+						"io"
+					],
+					"path": [
+						"api",
+						"hermes",
+						"events"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "registry"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
