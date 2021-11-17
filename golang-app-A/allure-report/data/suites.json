@@ -2,7 +2,7 @@
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
   "children" : [ {
     "name" : "?projectId=616d8d41abbd6ed8305526b2",
-    "uid" : "d8b2bdd284e3e24",
+    "uid" : "411525c60d75e635",
     "parentUid" : "98d3104e051c652961429bf95fa0b5d6",
     "status" : "passed",
     "time" : {
@@ -15,13 +15,39 @@
     "parameters" : [ ]
   }, {
     "name" : "events?type=registry",
-    "uid" : "a0037e3e6e6b0de5",
+    "uid" : "843e03780b41262e",
     "parentUid" : "98d3104e051c652961429bf95fa0b5d6",
     "status" : "passed",
     "time" : {
       "start" : 1637164618539,
       "stop" : 1637164618665,
       "duration" : 126
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "?projectId=616d8d41abbd6ed8305526b2",
+    "uid" : "7d4844ed59fe9d28",
+    "parentUid" : "98d3104e051c652961429bf95fa0b5d6",
+    "status" : "passed",
+    "time" : {
+      "start" : 1637164903710,
+      "stop" : 1637164904056,
+      "duration" : 346
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "events?type=registry",
+    "uid" : "8ed6a35bef17c9e1",
+    "parentUid" : "98d3104e051c652961429bf95fa0b5d6",
+    "status" : "passed",
+    "time" : {
+      "start" : 1637164904060,
+      "stop" : 1637164904134,
+      "duration" : 74
     },
     "flaky" : false,
     "newFailed" : false,
