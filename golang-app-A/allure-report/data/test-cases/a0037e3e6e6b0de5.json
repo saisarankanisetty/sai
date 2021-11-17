@@ -1,0 +1,35 @@
+{
+  "uid" : "a0037e3e6e6b0de5",
+  "name" : "events?type=registry",
+  "historyId" : "0640200cb1b6d358c3a83d7f9d7e220b",
+  "time" : {
+    "start" : 1637164618539,
+    "stop" : 1637164618665,
+    "duration" : 126
+  },
+  "descriptionHtml" : "<p style=\"color:MediumPurple;\"> <b>  </b> </p> <h4 style=\"color:DodgerBlue;\"><b><i>Request:</i></b></h4> <p style=\"color:DodgerBlue\"> <b> GET - https://g.codefresh.io/api/hermes/events </b> </p>  <table> <tr> <th style=\"border: 1px solid #dddddd;text-align: left;padding: 8px;color:Orange;\">  </th> <td style=\"border: 1px solid #dddddd;text-align: left;padding: 8px;\"> <pre style=\"color:Orange\"> <b>  </b> </pre> </td> </tr>  </table> </p> <h4 style=\"color:DodgerBlue;\"> <b> <i> Response: </i> </b> </h4> <p style=\"color:DodgerBlue\"> <b> 200 - OK </b> </p> <p > <pre style=\"color:Orange;\"> <b> [{\"endpoint\":\"https://g.codefresh.io/nomios/dockerhub?account=f897ec1c3726\\u0026secret=eeBoEoYxvt1zSkla\",\"description\":\"Docker Hub string/string push event\",\"status\":\"active\",\"help\":\"Docker Hub webhooks fire when an image is built in, pushed or a new tag is added to, your repository.\\n\\nConfigure Docker Hub on https://hub.docker.com/r/string/string/~/settings/webhooks/\\n\\nAdd following Codefresh Docker Hub webhook endpoint https://g.codefresh.io/nomios/dockerhub?account=f897ec1c3726\\u0026secret=eeBoEoYxvt1zSkla\",\"uri\":\"registry:dockerhub:string:string:push:f897ec1c3726\",\"type\":\"registry\",\"kind\":\"dockerhub\",\"account\":\"613d957aba5d174eec9fa47c\",\"secret\":\"eeBoEoYxvt1zSkla\"}] </b> </pre> </p>",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "api/hermes/events"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a0037e3e6e6b0de5.json",
+  "parameterValues" : [ ]
+}

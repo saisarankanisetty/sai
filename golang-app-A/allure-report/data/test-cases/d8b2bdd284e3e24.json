@@ -1,0 +1,35 @@
+{
+  "uid" : "d8b2bdd284e3e24",
+  "name" : "?projectId=616d8d41abbd6ed8305526b2",
+  "historyId" : "fe1c12469859b346ac73cdbabf709772",
+  "time" : {
+    "start" : 1637164618236,
+    "stop" : 1637164618535,
+    "duration" : 299
+  },
+  "descriptionHtml" : "<p style=\"color:MediumPurple;\"> <b>  </b> </p> <h4 style=\"color:DodgerBlue;\"><b><i>Request:</i></b></h4> <p style=\"color:DodgerBlue\"> <b> GET - https://g.codefresh.io/api/pipelines/ </b> </p>  <table> <tr> <th style=\"border: 1px solid #dddddd;text-align: left;padding: 8px;color:Orange;\">  </th> <td style=\"border: 1px solid #dddddd;text-align: left;padding: 8px;\"> <pre style=\"color:Orange\"> <b>  </b> </pre> </td> </tr>  </table> </p> <h4 style=\"color:DodgerBlue;\"> <b> <i> Response: </i> </b> </h4> <p style=\"color:DodgerBlue\"> <b> 200 - OK </b> </p> <p > <pre style=\"color:Orange;\"> <b> {\"docs\":[{\"metadata\":{\"name\":\"Testing/Testing\",\"project\":\"Testing\",\"projectId\":\"616d8d41abbd6ed8305526b2\",\"revision\":112,\"accountId\":\"613d957aba5d174eec9fa47c\",\"created_at\":\"2021-10-18T15:06:08.227Z\",\"updated_at\":\"2021-11-16T16:23:44.779Z\",\"shortName\":\"testing\",\"deprecate\":{},\"originalYamlString\":\"version: '1.0'\\nstages:\\n  - prepare\\n  - 'Microservice A'\\n  - 'Microservice B'\\nsteps:\\n  main_clone:\\n    title: Cloning main repository...\\n    type: git-clone\\n    repo: \\\"saisarankanisetty/Unit\\\"\\n    revision: 'master'\\n    git: github\\n    stage: prepare\\n  run_my_tests_before_build:\\n    title: Running Unit tests directly\\n    type: freestyle\\n    stage: 'Microservice A'\\n    image_name: saranhunt/unit\\n    tag: 'master'\\n    image: golang:1.12\\n    working_directory: './golang-app-A'\\n    dockerfile: Dockerfile\\n    commands:\\n      - go test -v\\n      - cp -r -f ./allure-results $CF_VOLUME_PATH/allure-results\\n  build_after_my_tests:\\n     title: Building Go Docker Image\\n     type: build\\n     stage: 'Microservice A'\\n     image_name: saranhunt/unit\\n     working_directory: './golang-app-A'\\n     tag: 'master'\\n     dockerfile: Dockerfile\\n     \\n  unit_test_reporting_step:\\n    title: Generate test reporting\\n    type: \\\"freestyle\\\"\\n    image: saranhunt/unit:master\\n    working_directory: '${{CF_VOLUME_PATH}}/'\\n    environment:\\n      - BUCKET_NAME=allure-results1\\n      - CF_STORAGE_INTEGRATION=Amazon\\n      - CF_BRANCH_TAG_NORMALIZED=${{CF_REVISION}}\\n    commands:\\n      - cd /$CF_VOLUME_PATH/Unit/golang-app-A\\n      - ls /$CF_VOLUME_PATH/Unit/golang-app-A\\n      - pwd\\n      - newman run test.postman_collection.json -r allure\\n      - newman run test.postman_collection.json -r allure --reporter-allure-export ${{CF_VOLUME_PATH}}/Unit/golang-app-A/\\n      - cd /$CF_VOLUME_PATH/golang-app-A\\n      - allure --version\\n      - allure generate --clean\",\"id\":\"616d8d60b8ab558024634265\"},\"version\":\"1.0\",\"kind\":\"pipeline\",\"spec\":{\"triggers\":[{\"name\":\"saisarankanisetty/Unit\",\"type\":\"git\",\"repo\":\"saisarankanisetty/Unit\",\"events\":[\"push.heads\"],\"pullRequestAllowForkEvents\":false,\"commentRegex\":\"/.*/gi\",\"branchRegex\":\"/.*/gi\",\"branchRegexInput\":\"regex\",\"provider\":\"github\",\"disabled\":false,\"options\":{\"noCache\":false,\"noCfCache\":false,\"resetVolume\":false},\"context\":\"github\",\"contexts\":[],\"status\":\"verified\",\"verified\":true,\"lastExecutionDate\":\"2021-11-16T16:23:59.271Z\",\"id\":\"616d8d62b01b7e654b99bd97\"}],\"stages\":[\"prepare\",\"Microservice A\",\"Microservice B\"],\"variables\":[],\"contexts\":[],\"steps\":{\"main_clone\":{\"title\":\"Cloning main repository...\",\"type\":\"git-clone\",\"repo\":\"saisarankanisetty/Unit\",\"revision\":\"master\",\"git\":\"github\",\"stage\":\"prepare\"},\"run_my_tests_before_build\":{\"title\":\"Running Unit tests directly\",\"type\":\"freestyle\",\"stage\":\"Microservice A\",\"image_name\":\"saranhunt/unit\",\"tag\":\"master\",\"image\":\"golang:1.12\",\"working_directory\":\"./golang-app-A\",\"dockerfile\":\"Dockerfile\",\"commands\":[\"go test -v\",\"cp -r -f ./allure-results $CF_VOLUME_PATH/allure-results\"]},\"build_after_my_tests\":{\"title\":\"Building Go Docker Image\",\"type\":\"build\",\"stage\":\"Microservice A\",\"image_name\":\"saranhunt/unit\",\"working_directory\":\"./golang-app-A\",\"tag\":\"master\",\"dockerfile\":\"Dockerfile\"},\"unit_test_reporting_step\":{\"title\":\"Generate test reporting\",\"type\":\"freestyle\",\"image\":\"saranhunt/unit:master\",\"working_directory\":\"${{CF_VOLUME_PATH}}/\",\"environment\":[\"BUCKET_NAME=allure-results1\",\"CF_STORAGE_INTEGRATION=Amazon\",\"CF_BRANCH_TAG_NORMALIZED=${{CF_REVISION}}\"],\"commands\":[\"cd /$CF_VOLUME_PATH/Unit/golang-app-A\",\"ls /$CF_VOLUME_PATH/Unit/golang-app-A\",\"pwd\",\"newman run test.postman_collection.json -r allure\",\"newman run test.postman_collection.json -r allure --reporter-allure-export ${{CF_VOLUME_PATH}}/Unit/golang-app-A/\",\"cd /$CF_VOLUME_PATH/golang-app-A\",\"allure --version\",\"allure generate --clean\"]}}},\"last_executed\":\"2021-11-16T16:23:59.320Z\"}],\"count\":1} </b> </pre> </p>",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "api/pipelines/"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d8b2bdd284e3e24.json",
+  "parameterValues" : [ ]
+}
